@@ -1,0 +1,7 @@
+[user]
+  name = Lan Nguyen
+  email = nguyenngoclan.clc@gmail.com
+[alias]
+  s = status -s
+  lg = log --oneline --decorate --all --graph
+  clear = !git reset --hard HEAD && git clean -df

@@ -1,0 +1,101 @@
+" [rails.vim] projections - typing `:Efactory users` will open the users factory
+let g:rails_projections = {
+      \ "spec/factories/*_factory.rb": {
+      \   "command":   "factory",
+      \   "affinity":  "collection",
+      \   "alternate": "app/models/%i.rb",
+      \   "related":   "spec/models/%i_spec.rb",
+      \   "test":      "spec/models/%i_spec.rb",
+      \   "template":  "FactoryGirl.define do\n  factory :%i do\n  end\nend",
+      \   "keywords":  "factory sequence"
+      \ },
+      \ "spec/models/*_spec.rb": {
+      \   "related":   "spec/factories/%i_factory.rb"
+      \ }
+      \}
+
+highlight LineNr ctermfg=white
+highlight Visual ctermfg=blue ctermbg=white
+set relativenumber
+syntax on
+set background=dark
+let g:solarized_termtrans = 1
+colorscheme solarized
+let g:move_map_keys = 0
+vmap <C-j> <Plug>MoveBlockDown
+vmap <C-k> <Plug>MoveBlockUp
+let test#strategy = "dispatch"
+
+" Common
+map <C-c> "*y<CR>
+nmap <Leader>cf :let @*=expand("%")<CR>
+map <C-a> <ESC>gg<S-v>G<ESC>
+map <Leader>ag :Ag!<SPACE>
+map <Leader>bi :PlugInstall<CR>
+map <Leader>ct :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<CR>
+map <Leader>fs :FixWhitespace<CR>
+map <Leader>n <C-w>v<C-h><SPACE><SPACE>
+map <Leader>nt :NERDTree<CR>
+map <Leader>q :q<CR>
+map <Leader>rm :Remove!<CR>
+map <Leader>sg :sp<CR>:grep<SPACE>
+map <Leader>sv :source ~/.vimrc<CR>
+map <Leader>te :tabe<SPACE>
+map <Leader>v "*p<CR>
+map <Leader>vi :tabe ~/.vimrc.local<CR>
+map <Leader>w :w<CR>
+nmap <CR> o<Esc>k
+nnoremap <S-CR> O<Esc>j
+map <Leader>k :Ag! <cword><CR>
+map <Leader>e /\<
+nnoremap <C-]> :CtrlPtjump<cr>
+vnoremap <C-]> :CtrlPtjumpVisual<cr>
+
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
+" Git
+map <Leader>co :Gread<CR>
+map <Leader>ga :Gwrite<CR>
+map <Leader>gac :Gcommit -am ""<LEFT>
+map <Leader>gb :Gblame<CR>
+map <Leader>gc :Gcommit -m ""<LEFT>
+map <Leader>gd :Gvdiff<CR>
+map <Leader>gm :Gmove<SPACE>
+map <Leader>gr :Gremove<CR>
+map <Leader>gs :Gstatus<CR>
+
+" Rails
+map <Leader>a <ESC>ggVG<CR>
+map <Leader>ac :Scontroller application<CR>
+map <Leader>ah :Vhelper application<CR>
+map <Leader>aj <ESC>:e app/assets/javascripts/application.js<CR>
+map <Leader>as <ESC>:e app/assets/stylesheets/application.scss<CR>
+map <Leader>av :AV<CR>
+map <Leader>bb :!bundle install<CR>
+map <Leader>c :Scontroller<SPACE>
+map <Leader>d <ESC>obinding.pry<ESC>
+map <Leader>dv <ESC>o- binding.pry<ESC>
+map <Leader>db :e config/database.yml<CR>
+map <Leader>g :e Gemfile<CR>
+map <Leader>m :Smodel<SPACE>
+map <Leader>rt :e config/routes.rb<CR>
+map <Leader>rv :RV<CR>
+map <Leader>sc :sp db/schema.rb<CR>
+map <Leader>vc :Vcontroller<SPACE>
+map <Leader>vm :Vmodel<SPACE>
+map <Leader>vv :Vview<SPACE>
+map <Leader>bc :Scontroller<SPACE>
+map <Leader>bm :Smodel<SPACE>
+map <Leader>bv :Sview<SPACE>
+map <Leader>vf :Vfactory<SPACE>
+map <Leader>sf :Sfactory<SPACE>
+map <Leader>vp :e app/policies/
+xmap ga <Plug>(EasyAlign)
