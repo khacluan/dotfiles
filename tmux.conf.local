@@ -21,3 +21,6 @@ bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 
 # Copy and past from clipboard
 set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+set-option -g status-position top
+

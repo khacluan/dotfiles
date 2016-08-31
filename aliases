@@ -19,5 +19,5 @@ alias path='echo $PATH | tr -s ":" "\n"'
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
 # For Vim 7.4
-alias vim='/usr/local/Cellar/vim/7.4.2290/bin/vim'
+#alias vim='/usr/local/Cellar/vim/7.4.2290/bin/vim
 

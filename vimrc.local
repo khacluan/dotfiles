@@ -99,3 +99,8 @@ map <Leader>vf :Vfactory<SPACE>
 map <Leader>sf :Sfactory<SPACE>
 map <Leader>vp :e app/policies/
 xmap ga <Plug>(EasyAlign)
+
+highlight ExtraWhitespace ctermbg=white
+autocmd BufWritePre * StripWhitespace
+
+
