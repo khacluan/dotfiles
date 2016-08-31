@@ -17,3 +17,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+# For Vim 7.4
+alias vim='/usr/local/Cellar/vim/7.4.2290/bin/vim'
+
