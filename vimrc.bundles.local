@@ -13,3 +13,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-rfactory'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'jpo/vim-railscasts-theme'
+Plug 'airblade/vim-gitgutter'
+Plug 'tomtom/tcomment_vim'
+Plug 'Yggdroot/indentLine'
+
