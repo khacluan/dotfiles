@@ -45,6 +45,7 @@ map <Leader>sv :source ~/.vimrc<CR>
 map <Leader>te :tabe<SPACE>
 map <Leader>v "*p<CR>
 map <Leader>vi :tabe ~/.vimrc.local<CR>
+map <Leader>vb :tabe ~/.vimrc.bundles.local<CR>
 map <Leader>w :w<CR>
 nmap <CR> o<Esc>k
 nnoremap <S-CR> O<Esc>j
@@ -103,7 +104,8 @@ map <Leader>sf :Sfactory<SPACE>
 map <Leader>vp :e app/policies/
 xmap ga <Plug>(EasyAlign)
 map <Leader>rf :e config/routes/
-
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_rails = 1
 
 
 highlight ExtraWhitespace ctermbg=white
@@ -119,10 +121,10 @@ let g:syntastic_error_symbol = ""
 let g:syntastic_warning_symbol = ""
 
 " Gitgutter
-let g:gitgutter_sign_added = '🍀'
-let g:gitgutter_sign_modified = '🍌'
-let g:gitgutter_sign_removed = '⊗'
-let g:gitgutter_sign_modified_removed = '+-'
+" let g:gitgutter_sign_added = '🍀'
+" let g:gitgutter_sign_modified = '🍌'
+" let g:gitgutter_sign_removed = '⊗'
+" let g:gitgutter_sign_modified_removed = '+-'
 
 " Find
 let g:ctrlp_tjump_shortener = ['/.*/gems/', '.../']
