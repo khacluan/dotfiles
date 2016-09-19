@@ -29,10 +29,15 @@ vmap <C-k> <Plug>MoveBlockUp
 let test#strategy = "dispatch"
 
 " Common
+map <Leader>tf :NERDTreeFind<CR>
 map <C-c> "*y<CR>
 nmap <Leader>cf :let @*=expand("%")<CR>
 map <C-a> <ESC>gg<S-v>G<ESC>
-map <Leader>ag :Ag!<SPACE>
+nnoremap <Leader>ag :Ag!<Space>
+if exists('g:ag_highlight')
+  let @/ = matchstr(a:args, "\\v(-)\@<!(\<)\@<=\\w+|['\"]\\zs.{-}\\ze['\"]")
+  call feedkeys(":let &hlsearch=1 \| echo \<CR>", 'n')
+endif
 map <Leader>bi :PlugInstall<CR>
 map <Leader>ct :Start! ctags -R ./ $(bundle list --paths) --languages=ruby --exclude={.git,log,app/assets/webpack,node_modules,"*.min.js","*.min.css"}<CR>
 map <Leader>fs :FixWhitespace<CR>
@@ -54,6 +59,15 @@ map <Leader>cv :REview <C-r><C-w>.html.haml
 map <Leader>e /\<
 nnoremap <C-]> :CtrlPtjump<cr>
 vnoremap <C-]> :CtrlPtjumpVisual<cr>
+
+" Search
+nmap fs :Ag! "<cword>" -G "\.(css\|scss)" --ignore "*.min.css" --ignore-dir "app/assets/stylesheets/components"<CR>
+nmap fj :Ag! "<cword>" -G "\.js" --ignore "*.min.js" --ignore-dir "app/assets/javascripts/components"<CR>
+nmap fr :Ag! "<cword>" -G "\.rb"<CR>
+nmap fv :Ag! "<cword>" -G "\.(haml\|erb)"<CR>
+nmap fm :Ag! "<cword>" -G "\.rb" -r "app/models"<CR>
+nmap fc :Ag! "<cword>" -G "\.rb" -r "app/controllers"<CR>
+nmap fa :Ag! "<cword>" -G "\.(rb\|erb\|js\|css\|scss\|yml\|rake\|haml)" --ignore "*.min.*" --ignore-dir "app/assets/javascripts/components" --ignore-dir "app/assets/stylesheets/components"<CR>
 
 " Gif config
 map  / <Plug>(easymotion-sn)
@@ -91,6 +105,7 @@ map <Leader>db :e config/database.yml<CR>
 map <Leader>g :e Gemfile<CR>
 map <Leader>m :Smodel<SPACE>
 map <Leader>rt :e config/routes.rb<CR>
+map <Leader>art :e config/routes/admin.rb<CR>
 map <Leader>rv :RV<CR>
 map <Leader>sc :sp db/schema.rb<CR>
 map <Leader>vc :Vcontroller<SPACE>
@@ -104,6 +119,8 @@ map <Leader>sf :Sfactory<SPACE>
 map <Leader>vp :e app/policies/
 xmap ga <Plug>(EasyAlign)
 map <Leader>rf :e config/routes/
+map <Leader>cp :Rextract<SPACE>
+vmap <Leader>f :MultipleCursorsFind<SPACE>
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 

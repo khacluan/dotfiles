@@ -25,3 +25,4 @@ set-option -g default-command "reattach-to-user-namespace -l zsh"
 set-option -g status-position top
 set -s escape-time 0
 
+run-shell ~/.tmuxinator/tmux-safekill/safekill.tmux

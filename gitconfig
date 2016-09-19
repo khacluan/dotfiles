@@ -13,12 +13,12 @@
   pf = push --force-with-lease
   st = status
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/luand/.gitignore_global
   autocrlf = input
 [merge]
   ff = only
 [commit]
-  template = ~/.gitmessage
+	template = ~/.gitmessage
 [fetch]
   prune = true
 [rebase]
@@ -31,3 +31,6 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[user]
+	name = Luan D
+	email = luan@lixibox.com
