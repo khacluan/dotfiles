@@ -13,6 +13,19 @@ let g:rails_projections = {
       \   "related":   "spec/factories/%i_factory.rb"
       \ }
       \}
+let g:airline#extensions#default#layout = [
+    \ [ 'a', 'b'],
+    \ [ 'error', 'warning' ]
+    \ ]
+
+function! AirlineInit()
+  let g:airline_section_a = airline#section#create(['mode'])
+  let g:airline_section_b = airline#section#create_left(['file'])
+  let g:airline_section_c = airline#section#create([])
+endfunction
+
+autocmd User AirlineAfterInit call AirlineInit()
+
 
 highlight LineNr ctermfg=white
 highlight Visual ctermfg=blue ctermbg=white
@@ -31,6 +44,7 @@ set clipboard=unnamed
 
 " Common
 map <Leader>tf :NERDTreeFind<CR>
+vmap p "_dp
 map <C-c> "*y<CR>
 nmap <Leader>cf :let @*=expand("%")<CR>
 map <C-a> <ESC>gg<S-v>G<ESC>
@@ -51,7 +65,7 @@ map <Leader>sv :source ~/.vimrc<CR>
 map <Leader>te :tabe<SPACE>
 map <Leader>v "*p<CR>
 map <Leader>vi :tabe ~/.vimrc.local<CR>
-map <Leader>vb :tabe ~/.vimrc.bundles.local<CR>
+map <Leader>bd :tabe ~/.vimrc.bundles.local<CR>
 map <Leader>w :w<CR>
 nmap <CR> o<Esc>k
 nnoremap <S-CR> O<Esc>j
@@ -64,13 +78,13 @@ nnoremap <C-]> :CtrlPtjump<cr>
 vnoremap <C-]> :CtrlPtjumpVisual<cr>
 
 " Search
-nmap fs :Ag! "<cword>" -G "\.(css\|scss)" --ignore "*.min.css" --ignore-dir "app/assets/stylesheets/components"<CR>
-nmap fj :Ag! "<cword>" -G "\.js" --ignore "*.min.js" --ignore-dir "app/assets/javascripts/components"<CR>
+nmap fs :Ag! "<cword>" -G "\.(css\|scss)" --ignore "*.min.css" --ignore-dir "app/assets/stylesheets/components" --ignore-dir "app/assets/webpack"<CR>
+nmap fj :Ag! "<cword>" -G "\.js" --ignore "*.min.js" --ignore-dir "app/assets/javascripts/components" --ignore-dir "app/assets/webpack"<CR>
 nmap fr :Ag! "<cword>" -G "\.rb"<CR>
 nmap fv :Ag! "<cword>" -G "\.(haml\|erb)"<CR>
 nmap fm :Ag! "<cword>" -G "\.rb" -r "app/models"<CR>
 nmap fc :Ag! "<cword>" -G "\.rb" -r "app/controllers"<CR>
-nmap fa :Ag! "<cword>" -G "\.(rb\|erb\|js\|css\|scss\|yml\|rake\|haml)" --ignore "*.min.*" --ignore-dir "app/assets/javascripts/components" --ignore-dir "app/assets/stylesheets/components"<CR>
+nmap fa :Ag! "<cword>" -G "\.(rb\|erb\|js\|css\|scss\|yml\|rake\|haml)" --ignore "*.min.*" --ignore-dir "app/assets/javascripts/components" --ignore-dir "app/assets/stylesheets/components" --ignore-dir "app/assets/webpack"<CR>
 
 " Gif config
 map  / <Plug>(easymotion-sn)
@@ -112,6 +126,7 @@ map <Leader>art :e config/routes/admin.rb<CR>
 map <Leader>rv :RV<CR>
 map <Leader>sc :sp db/schema.rb<CR>
 map <Leader>vc :Vcontroller<SPACE>
+map <Leader>va :e app/controllers/api/v1/
 map <Leader>vm :Vmodel<SPACE>
 map <Leader>vv :Vview<SPACE>
 map <Leader>bc :Scontroller<SPACE>
@@ -126,10 +141,9 @@ map <Leader>cp :Rextract<SPACE>
 vmap <Leader>f :MultipleCursorsFind<SPACE>
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
-
-
 highlight ExtraWhitespace ctermbg=white
 autocmd BufWritePre * StripWhitespace
+nnoremap <silent> P :GitGrepCurrentPartial<CR>
 
 " NERDTree
 let g:NERDTreeDirArrowExpandable = ""
