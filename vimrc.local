@@ -33,9 +33,9 @@ highlight Visual ctermfg=blue ctermbg=white
 set autoread
 let g:indentLine_color_term = 239
 syntax on
+color dracula
 set background=dark
 let g:solarized_termtrans = 1
-colorscheme railscasts
 let g:move_map_keys = 0
 vmap <C-j> <Plug>MoveBlockDown
 vmap <C-k> <Plug>MoveBlockUp
@@ -127,12 +127,12 @@ map <Leader>rv :RV<CR>
 map <Leader>sc :sp db/schema.rb<CR>
 map <Leader>vc :Vcontroller<SPACE>
 map <Leader>va :e app/controllers/api/v1/
+map <Leader>vf :e app/forms/
 map <Leader>vm :Vmodel<SPACE>
 map <Leader>vv :Vview<SPACE>
 map <Leader>bc :Scontroller<SPACE>
 map <Leader>bm :Smodel<SPACE>
 map <Leader>bv :Sview<SPACE>
-map <Leader>vf :Vfactory<SPACE>
 map <Leader>sf :Sfactory<SPACE>
 map <Leader>vp :e app/policies/
 xmap ga <Plug>(EasyAlign)

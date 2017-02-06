@@ -86,3 +86,5 @@ source $ZSH/oh-my-zsh.sh
 #
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
