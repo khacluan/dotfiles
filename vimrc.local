@@ -26,7 +26,7 @@ endfunction
 
 autocmd User AirlineAfterInit call AirlineInit()
 
-
+let NERDTreeShowHidden=1
 highlight LineNr ctermfg=white
 highlight Visual ctermfg=blue ctermbg=white
 " set relativenumber
@@ -146,9 +146,9 @@ autocmd BufWritePre * StripWhitespace
 nnoremap <silent> P :GitGrepCurrentPartial<CR>
 
 " NERDTree
-let g:NERDTreeDirArrowExpandable = ""
-let g:NERDTreeDirArrowCollapsible = ""
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+" let g:NERDTreeDirArrowExpandable = "📂"
+" let g:NERDTreeDirArrowCollapsible = "<"
+" let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 
 " Syntastic
 let g:syntastic_error_symbol = ""
