@@ -41,6 +41,7 @@ vmap <C-j> <Plug>MoveBlockDown
 vmap <C-k> <Plug>MoveBlockUp
 let test#strategy = "dispatch"
 set clipboard=unnamed
+set ic " case insensitive search
 
 " Common
 map <Leader>tf :NERDTreeFind<CR>
@@ -106,6 +107,10 @@ map <Leader>gd :Gvdiff<CR>
 map <Leader>gm :Gmove<SPACE>
 map <Leader>gr :Gremove<CR>
 map <Leader>gs :Gstatus<CR>
+
+" React
+" Trigger configuration (Optional)
+let g:UltiSnipsExpandTrigger="<C-l>"
 
 " Rails
 map <Leader>a <ESC>ggVG<CR>
