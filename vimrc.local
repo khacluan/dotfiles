@@ -55,7 +55,7 @@ if exists('g:ag_highlight')
   call feedkeys(":let &hlsearch=1 \| echo \<CR>", 'n')
 endif
 map <Leader>bi :PlugInstall<CR>
-map <Leader>ct :Start! ctags -R ./ $(bundle list --paths) --languages=ruby --exclude={.git,log,app/assets/webpack,node_modules,"*.min.js","*.min.css"}<CR>
+map <Leader>ct :Start! ctags -R "."<CR>
 map <Leader>fs :FixWhitespace<CR>
 map <Leader>n <C-w>v<C-h><SPACE><SPACE>
 map <Leader>nt :NERDTree<CR>
@@ -111,6 +111,7 @@ map <Leader>gs :Gstatus<CR>
 " React
 " Trigger configuration (Optional)
 let g:UltiSnipsExpandTrigger="<C-l>"
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js" "closetag
 
 " Rails
 map <Leader>a <ESC>ggVG<CR>
@@ -166,7 +167,7 @@ let g:syntastic_warning_symbol = ""
 " let g:gitgutter_sign_modified_removed = '+-'
 
 " Find
-let g:ctrlp_tjump_shortener = ['/.*/gems/', '.../']
+let g:ctrlp_tjump_shortener = ['/.*/gems/', '.../', '/.js', '/.jsx']
 let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
 
