@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+git status --porcelain | cut -c4- | grep '.rb' | xargs rubocop

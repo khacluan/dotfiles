@@ -1,7 +1,18 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
-local_hook="$HOME"/.git_template.local/hooks/prepare-commit-msg
+branch_name=`git symbolic-ref HEAD`.strip
+message_file=ARGV[0]
 
-if [ -f "$local_hook" ]; then
-  . "$local_hook"
-fi
+if branch_name =~ /(--|__)(\w+)\z/
+  story_number=$2
+  message=File.read(message_file).strip
+
+  exit 0 if message.include?("c/#{story_number}")
+
+  if ARGV[1] == 'message'
+    message << "\n\n[https://trello.com/c/#{story_number}]"
+  else
+    message = "\n\n[https://trello.com/c/#{story_number}]\n" + message
+  end
+  File.open(message_file, 'w') { |f| f.write(message) }
+end

@@ -12,6 +12,7 @@ alias b="bundle"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
 alias cl='clear'
+alias yt='yarn start'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'

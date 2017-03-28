@@ -14,7 +14,7 @@ let g:rails_projections = {
       \ }
       \}
 let g:airline#extensions#default#layout = [
-    \ [ 'a', 'b'],
+    \ [ 'a', 'b', 'c'],
     \ [ 'error', 'warning' ]
     \ ]
 
@@ -26,15 +26,21 @@ endfunction
 
 autocmd User AirlineAfterInit call AirlineInit()
 
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 highlight LineNr ctermfg=white
 highlight Visual ctermfg=blue ctermbg=white
 " set relativenumber
 set autoread
 let g:indentLine_color_term = 239
 syntax on
-color dracula
-set background=dark
+
+" ColorScheme
+set termguicolors     " enable true colors support
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+
 let g:solarized_termtrans = 1
 let g:move_map_keys = 0
 vmap <C-j> <Plug>MoveBlockDown
@@ -65,6 +71,7 @@ map <Leader>sg :sp<CR>:grep<SPACE>
 map <Leader>sv :source ~/.vimrc<CR>
 map <Leader>te :tabe<SPACE>
 map <Leader>v "*p<CR>
+map <Leader>h :browse old<CR>
 map <Leader>vi :tabe ~/.vimrc.local<CR>
 map <Leader>bd :tabe ~/.vimrc.bundles.local<CR>
 map <Leader>w :w<CR>
@@ -73,6 +80,7 @@ nnoremap <S-CR> O<Esc>j
 map <Leader>k :Ag! <cword><CR>
 map <Leader>cv :REview <C-r><C-w>.html.haml
 map <Leader>e /\<
+map <Leader>cs :!git status --porcelain \| cut -c4- \| grep '.rb' \| xargs rubocop<CR>
 vmap u .
 vmap U .
 nnoremap <C-]> :CtrlPtjump<cr>
@@ -107,6 +115,7 @@ map <Leader>gd :Gvdiff<CR>
 map <Leader>gm :Gmove<SPACE>
 map <Leader>gr :Gremove<CR>
 map <Leader>gs :Gstatus<CR>
+map <Leader>go :Gbrowse<CR>
 
 " React
 " Trigger configuration (Optional)
