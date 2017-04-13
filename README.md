@@ -50,6 +50,14 @@ You can safely run `rcup` multiple times to update:
 You should run `rcup` after pulling a new version of the repository to symlink
 any new files in the repository.
 
+NeoVim
+----------------------------
+
+```
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vimrc ~/.config/nvim/init.vim
+```
+
 Make your own customizations
 ----------------------------
 
