@@ -14,23 +14,18 @@ let g:rails_projections = {
       \ }
       \}
 
+" NeoMake
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_exe = './node_modules/.bin/eslint'
+autocmd BufWritePost * Neomake " Lint check when save
+" let g:neomake_open_list = 2 " Open errors windows
+let g:neomake_logfile='/tmp/neomake_error.log'
+
 " Tagbar
 map <Leader>b :TagbarToggle<CR>
 
 " Flow check
-let g:flow#errjmp=1
-
-" Syntatisc
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_debug = 3
+" let g:flow#errjmp=1
 
 " function! AirlineInit()
 "   let g:airline_section_a = airline#section#create(['mode'])
@@ -48,12 +43,17 @@ set autoread
 let g:indentLine_color_term = 239
 syntax on
 
-" ColorScheme
-set termguicolors     " enable true colors support
-"let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Or if you have Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Theme
+syntax enable
+colorscheme OceanicNext
 
 let g:solarized_termtrans = 1
 let g:move_map_keys = 0
@@ -193,3 +193,7 @@ let g:ctrlp_tjump_shortener = ['/.*/gems/', '.../', '/.js', '/.jsx']
 let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
 
+set clipboard=unnamed
+
+" Jest to test javascript
+map <Leader>tj :!yarn jest %<CR>
