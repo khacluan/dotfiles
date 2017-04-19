@@ -11,12 +11,17 @@ alias b="bundle"
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
+alias rs='rails s'
+alias rc='rails c'
 alias cl='clear'
 alias yt='yarn start'
 alias mux='tmuxinator'
 alias vim='nvim'
 alias vi='nvim'
 alias python='python3'
+alias yyt='yarn && yarn start'
+alias yt='yarn start'
+alias ya='yarn flow && yarn lint && yarn test'
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
