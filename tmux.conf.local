@@ -18,7 +18,7 @@ bind-key -t vi-copy WheelUpPane halfpage-up
 bind-key -t vi-copy WheelDownPane halfpage-down
 
 # Shortcuts
-bind-key -n C-n split-window -h -c '#{pane_current_path}'
+#bind-key -n C-n split-window -h -c '#{pane_current_path}'
 # bind-key -n C-o split-window -c '#{pane_current_path}'
 bind-key -n C-w kill-pane
 
