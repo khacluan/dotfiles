@@ -33,3 +33,5 @@ Plug 'majutsushi/tagbar'
 Plug 'neomake/neomake'
 Plug 'mhartington/oceanic-next'
 Plug 'craigdallimore/vim-jest-cli'
+Plug 'mbbill/undotree'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

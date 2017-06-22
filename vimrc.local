@@ -15,8 +15,9 @@ let g:rails_projections = {
       \}
 
 " NeoMake
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 let g:neomake_javascript_eslint_exe = './node_modules/.bin/eslint'
+let g:neomake_javascript_flow_exe = './node_modules/.bin/flow'
 autocmd BufWritePost * Neomake " Lint check when save
 " let g:neomake_open_list = 2 " Open errors windows
 let g:neomake_logfile='/tmp/neomake_error.log'
@@ -38,7 +39,7 @@ map <Leader>b :TagbarToggle<CR>
 " let NERDTreeShowHidden=1
 highlight LineNr ctermfg=white
 highlight Visual ctermfg=blue ctermbg=white
-" set relativenumber
+set relativenumber
 set autoread
 let g:indentLine_color_term = 239
 syntax on
@@ -98,6 +99,7 @@ map <Leader>k :Ag! <cword><CR>
 map <Leader>cv :REview <C-r><C-w>.html.haml
 map <Leader>e /\<
 map <Leader>cs :!git status --porcelain \| cut -c4- \| grep '.rb' \| xargs rubocop<CR>
+map <Leader>ut :UndotreeToggle<CR>
 vmap u .
 vmap U .
 nnoremap <C-]> :CtrlPtjump<cr>
@@ -158,8 +160,9 @@ map <Leader>art :e config/routes/admin.rb<CR>
 map <Leader>rv :RV<CR>
 map <Leader>sc :sp db/schema.rb<CR>
 map <Leader>vc :Vcontroller<SPACE>
-map <Leader>va :e app/controllers/api/v1/
+map <Leader>va :e app/api/employment_hero/v2
 map <Leader>vf :e app/forms/
+map <Leader>vr :e app/react/beta/components/
 map <Leader>vm :Vmodel<SPACE>
 map <Leader>vv :Vview<SPACE>
 map <Leader>bc :Scontroller<SPACE>
@@ -170,6 +173,7 @@ map <Leader>vp :e app/policies/
 xmap ga <Plug>(EasyAlign)
 map <Leader>rf :e config/routes/
 map <Leader>cp :Rextract<SPACE>
+map <Leader>fm :%s/\t/  /g<CR>
 vmap <Leader>f :MultipleCursorsFind<SPACE>
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
@@ -194,8 +198,22 @@ let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
 
 set clipboard=unnamed
+filetype plugin indent on
+" show existing tab with 4 spaces width
 set tabstop=2
+" when indenting with '>', use 4 spaces width
+set shiftwidth=2
+" On pressing tab, insert 4 spaces
+set expandtab
 
+" Get path of current file
+nmap <Leader>gp :let @+ = expand("%:p")<CR>
 
 " Jest to test javascript
 map <Leader>tj :!yarn jest %<CR>
+
+nnoremap x "_x
+vnoremap x "_x
+
+" Neovim autocomplet
+let g:deoplete#enable_at_startup = 1

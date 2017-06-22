@@ -10,7 +10,7 @@ root: ~/projects/employment-hero
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
+pre_window: rvm use 2.3.3@eh
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -41,5 +41,4 @@ windows:
         - clear
   - Server: rails s
   - Yarn: yarn && yarn start
-  - Services: brew services start postgresql && bin/delayed_job start
 
