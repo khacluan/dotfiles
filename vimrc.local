@@ -217,3 +217,7 @@ vnoremap x "_x
 
 " Neovim autocomplet
 let g:deoplete#enable_at_startup = 1
+
+" set question mark in a word
+set iskeyword+=?
+set iskeyword+=!
