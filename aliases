@@ -25,9 +25,8 @@ alias ya='yarn flow && yarn lint && yarn testdev'
 alias rspec='bundle exec rspec'
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
-alias kpsql="kill -9 $(cat /usr/local/var/postgres/postmaster.pid | awk 'NR == 1')"
 
-# Include custom aliases
+#Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
 # For Vim 7.4

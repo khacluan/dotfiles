@@ -1,6 +1,6 @@
 " [rails.vim] projections - typing `:Efactory users` will open the users factory
 let g:rails_projections = {
-      \ "spec/factories/*_factory.rb": {
+      \ "spec/factories/*.rb": {
       \   "command":   "factory",
       \   "affinity":  "collection",
       \   "alternate": "app/models/%i.rb",
@@ -60,12 +60,23 @@ let g:solarized_termtrans = 1
 let g:move_map_keys = 0
 vmap <C-j> <Plug>MoveBlockDown
 vmap <C-k> <Plug>MoveBlockUp
-let test#strategy = "dispatch"
+
+" Testing configure
+let test#strategy = {
+  \ 'nearest': 'neovim',
+  \ 'file':    'dispatch',
+  \ 'suite':   'basic',
+  \}
+
+let g:rspec_runner = "os_x_iterm2"
+
+
 set clipboard=unnamed
 set ic " case insensitive search
 
 " Format JS
 let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 0
 
 " Common
 map <Leader>tf :NERDTreeFind<CR>
@@ -100,6 +111,7 @@ map <Leader>cv :REview <C-r><C-w>.html.haml
 map <Leader>e /\<
 map <Leader>cs :!git status --porcelain \| cut -c4- \| grep '.rb' \| xargs rubocop<CR>
 map <Leader>ut :UndotreeToggle<CR>
+map <Leader>rr :!ruby %<CR>
 vmap u .
 vmap U .
 nnoremap <C-]> :CtrlPtjump<cr>
@@ -115,14 +127,14 @@ nmap fc :Ag! "<cword>" -G "\.rb" -r "app/controllers"<CR>
 nmap fa :Ag! "<cword>" -G "\.(rb\|erb\|js\|css\|scss\|yml\|rake\|haml)" --ignore "*.min.*" --ignore-dir "app/assets/javascripts/components" --ignore-dir "app/assets/stylesheets/components" --ignore-dir "app/assets/webpack"<CR>
 
 " Gif config
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+" map  / <Plug>(easymotion-sn)
+" omap / <Plug>(easymotion-tn)
 
 " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
 " Without these mappings, `n` & `N` works fine. (These mappings just provide
 " different highlight method and have some other features )
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+" map  n <Plug>(easymotion-next)
+" map  N <Plug>(easymotion-prev)
 
 " Git
 map <Leader>co :Gread<CR>
@@ -168,7 +180,7 @@ map <Leader>vv :Vview<SPACE>
 map <Leader>bc :Scontroller<SPACE>
 map <Leader>bm :Smodel<SPACE>
 map <Leader>bv :Sview<SPACE>
-map <Leader>sf :Sfactory<SPACE>
+map <Leader>sf :Sfactory <C-R><C-W><CR>
 map <Leader>vp :e app/policies/
 xmap ga <Plug>(EasyAlign)
 map <Leader>rf :e config/routes/
@@ -215,7 +227,7 @@ map <Leader>tj :!yarn jest %<CR>
 nnoremap x "_x
 vnoremap x "_x
 
-" Neovim autocomplet
+" Neovim autocomplete
 let g:deoplete#enable_at_startup = 1
 
 " set question mark in a word

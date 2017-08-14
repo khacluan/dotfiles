@@ -40,7 +40,7 @@ windows:
         - nvim .
         - clear
   - Server: rails s
-  - GrpcServer: bundle exec ruby grpc/grpc_server.rb
   - Yarn: yarn && yarn start
   - RabbitMQ: brew services start rabbitmq
+  #- GrpcServer: bundle exec ruby grpc/grpc_server.rb
 

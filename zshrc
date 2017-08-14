@@ -88,3 +88,6 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
