@@ -45,11 +45,12 @@ Plug 'moll/vim-node'
 Plug 'ryanoasis/vim-devicons'
 Plug 'flowtype/vim-flow'
 Plug 'majutsushi/tagbar'
-Plug 'neomake/neomake'
 Plug 'mhartington/oceanic-next'
+Plug 'neomake/neomake'
 Plug 'craigdallimore/vim-jest-cli'
 Plug 'mbbill/undotree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'kylef/apiblueprint.vim'
 Plug 'shime/vim-livedown'
+Plug 'easymotion/vim-easymotion'
