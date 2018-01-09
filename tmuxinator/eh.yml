@@ -33,14 +33,9 @@ pre_window: rvm use 2.3.3@eh
 windows:
   - Editor:
       layout: main-horizontal
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
       panes:
         - nvim .
-        - clear
   - Server: rails s
-  - Yarn: yarn && yarn start
   - RabbitMQ: brew services start rabbitmq
   #- GrpcServer: bundle exec ruby grpc/grpc_server.rb
 

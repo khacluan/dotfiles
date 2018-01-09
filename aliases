@@ -9,6 +9,12 @@ alias v="$VISUAL"
 alias b="bundle"
 
 # Rails
+alias rdbm="rake db:migrate"
+alias rdbc="rake db:create"
+alias rdbd="rake db:drop"
+alias rdbr="rake db:rollback"
+alias rdbs="rake db:seed"
+alias rr="rake routes"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
 alias rs='rails s'
@@ -23,6 +29,7 @@ alias yyt='yarn && yarn start'
 alias yt='yarn start'
 alias ya='yarn flow && yarn lint && yarn testdev'
 alias rspec='bundle exec rspec'
+alias load='source ~/.zshrc'
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
