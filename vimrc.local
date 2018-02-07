@@ -151,6 +151,7 @@ map <Leader>aj <ESC>:e app/assets/javascripts/application.js<CR>
 map <Leader>as <ESC>:e app/assets/stylesheets/application.scss<CR>
 map <Leader>av :AV<CR>
 map <Leader>bb :!bundle install<CR>
+map <Leader>rdbm :!rake db:migrate<CR>
 map <Leader>c :Scontroller<SPACE>
 map <Leader>d <ESC>obyebug<ESC>
 map <Leader>dv <ESC>o- byebug<ESC>
@@ -245,4 +246,4 @@ nmap <silent> t<C-l> :TestLast<CR>    " t Ctrl+l
 nmap <silent> t<C-g> :TestVisit<CR>   " t Ctrl+g
 
 let test#strategy = "neovim"
-let g:test#preserve_screen = 1
+let g:test#preserve_screen = 0

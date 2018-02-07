@@ -1,0 +1,158 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<Leader>ct	vim/plugin/ctags.vim	/^nmap <Leader>ct :call ReindexCtags()<CR>$/;"	m
+GitChurn	bin/git-churn	/^class GitChurn$/;"	c
+ReindexCtags	vim/plugin/ctags.vim	/^function! ReindexCtags()$/;"	f
+_tmuxinator	tmuxinator/tmuxinator.zsh	/^_tmuxinator() {$/;"	f
+append_ul	config/nvim/autoload/plug.vim	/^function! s:append_ul(lnum, text)$/;"	f
+ask	config/nvim/autoload/plug.vim	/^function! s:ask(message, ...)$/;"	f
+ask_no_interrupt	config/nvim/autoload/plug.vim	/^function! s:ask_no_interrupt(...)$/;"	f
+assign_name	config/nvim/autoload/plug.vim	/^function! s:assign_name()$/;"	f
+assoc	config/nvim/autoload/plug.vim	/^function! s:assoc(dict, key, val)$/;"	f
+bang	config/nvim/autoload/plug.vim	/^function! s:bang(cmd, ...)$/;"	f
+bar	config/nvim/autoload/plug.vim	/^function! s:bar()$/;"	f
+calculate	bin/git-churn	/^  def calculate$/;"	f	class:GitChurn
+check_ruby	config/nvim/autoload/plug.vim	/^function! s:check_ruby()$/;"	f
+checkout	config/nvim/autoload/plug.vim	/^function! s:checkout(spec)$/;"	f
+chsh	config/nvim/autoload/plug.vim	/^function! s:chsh(swap)$/;"	f
+clean	config/nvim/autoload/plug.vim	/^function! s:clean(force)$/;"	f
+compare_git_uri	config/nvim/autoload/plug.vim	/^function! s:compare_git_uri(a, b)$/;"	f
+create_detached_session	bin/tat	/^create_detached_session() {$/;"	f
+create_if_needed_and_attach	bin/tat	/^create_if_needed_and_attach() {$/;"	f
+define_commands	config/nvim/autoload/plug.vim	/^function! s:define_commands()$/;"	f
+delete	config/nvim/autoload/plug.vim	/^function! s:delete(range, force)$/;"	f
+delete_op	config/nvim/autoload/plug.vim	/^function! s:delete_op(type, ...)$/;"	f
+diff	config/nvim/autoload/plug.vim	/^function! s:diff()$/;"	f
+dirpath	config/nvim/autoload/plug.vim	/^  function! s:dirpath(path)$/;"	f
+do	config/nvim/autoload/plug.vim	/^function! s:do(pull, force, todo)$/;"	f
+doautocmd	config/nvim/autoload/plug.vim	/^function! s:doautocmd(...)$/;"	f
+dobufread	config/nvim/autoload/plug.vim	/^function! s:dobufread(names)$/;"	f
+err	config/nvim/autoload/plug.vim	/^function! s:err(msg)$/;"	f
+esc	config/nvim/autoload/plug.vim	/^function! s:esc(path)$/;"	f
+escrtp	config/nvim/autoload/plug.vim	/^function! s:escrtp(path)$/;"	f
+extract_name	config/nvim/autoload/plug.vim	/^function! s:extract_name(str, prefix, suffix)$/;"	f
+file_changed?	bin/git-churn	/^  def file_changed?(file)$/;"	f	class:GitChurn
+filter_into_result	bin/git-churn	/^  def filter_into_result$/;"	f	class:GitChurn
+find_name	config/nvim/autoload/plug.vim	/^function! s:find_name(lnum)$/;"	f
+finish	config/nvim/autoload/plug.vim	/^function! s:finish(pull)$/;"	f
+finish_bindings	config/nvim/autoload/plug.vim	/^function! s:finish_bindings()$/;"	f
+format_git_log	config/nvim/autoload/plug.vim	/^function! s:format_git_log(line)$/;"	f
+format_logs	bin/git-churn	/^  def format_logs$/;"	f	class:GitChurn
+format_message	config/nvim/autoload/plug.vim	/^function! s:format_message(bullet, name, message)$/;"	f
+g:Tlist_Ctags_Cmd	vim/plugin/ctags.vim	/^let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"$/;"	v
+g:go_fmt_command	vim/ftplugin/go.vim	/^let g:go_fmt_command = "goimports"$/;"	v
+g:loaded_plug	config/nvim/autoload/plug.vim	/^let g:loaded_plug = 1$/;"	v
+g:plugs_order	config/nvim/autoload/plug.vim	/^  let g:plugs_order = get(g:, 'plugs_order', keys(g:plugs))$/;"	v
+get_all_files_with_churn_count	bin/git-churn	/^  def get_all_files_with_churn_count$/;"	f	class:GitChurn
+get_changed_files	bin/git-churn	/^  def get_changed_files$/;"	f	class:GitChurn
+git_prompt_info	zsh/configs/prompt.zsh	/^git_prompt_info() {$/;"	f
+git_validate	config/nvim/autoload/plug.vim	/^function! s:git_validate(spec, check_branch)$/;"	f
+git_version_requirement	config/nvim/autoload/plug.vim	/^function! s:git_version_requirement(...)$/;"	f
+glob	config/nvim/autoload/plug.vim	/^function! s:glob(from, pattern)$/;"	f
+glob_dir	config/nvim/autoload/plug.vim	/^function! s:glob_dir(path)$/;"	f
+hash_match	config/nvim/autoload/plug.vim	/^function! s:hash_match(a, b)$/;"	f
+infer_properties	config/nvim/autoload/plug.vim	/^function! s:infer_properties(name, repo)$/;"	f
+install	config/nvim/autoload/plug.vim	/^function! s:install(force, names)$/;"	f
+is_local_plug	config/nvim/autoload/plug.vim	/^  function! s:is_local_plug(repo)$/;"	f
+is_managed	config/nvim/autoload/plug.vim	/^function! s:is_managed(name)$/;"	f
+is_preview_window_open	config/nvim/autoload/plug.vim	/^function! s:is_preview_window_open()$/;"	f
+is_updated	config/nvim/autoload/plug.vim	/^function! s:is_updated(dir)$/;"	f
+job_abort	config/nvim/autoload/plug.vim	/^function! s:job_abort()$/;"	f
+job_cb	config/nvim/autoload/plug.vim	/^function! s:job_cb(fn, job, ch, data)$/;"	f
+job_exit_cb	config/nvim/autoload/plug.vim	/^function! s:job_exit_cb(self, data) abort$/;"	f
+job_out_cb	config/nvim/autoload/plug.vim	/^function! s:job_out_cb(self, data) abort$/;"	f
+last_non_empty_line	config/nvim/autoload/plug.vim	/^function! s:last_non_empty_line(lines)$/;"	f
+lastline	config/nvim/autoload/plug.vim	/^function! s:lastline(msg)$/;"	f
+lines	config/nvim/autoload/plug.vim	/^function! s:lines(msg)$/;"	f
+load_plugin	config/nvim/autoload/plug.vim	/^function! s:load_plugin(spec)$/;"	f
+loaded_names	config/nvim/autoload/plug.vim	/^function! s:loaded_names()$/;"	f
+lod	config/nvim/autoload/plug.vim	/^function! s:lod(names, types, ...)$/;"	f
+lod_cmd	config/nvim/autoload/plug.vim	/^function! s:lod_cmd(cmd, bang, l1, l2, args, names)$/;"	f
+lod_ft	config/nvim/autoload/plug.vim	/^function! s:lod_ft(pat, names)$/;"	f
+lod_map	config/nvim/autoload/plug.vim	/^function! s:lod_map(map, names, with_prefix, prefix)$/;"	f
+log	config/nvim/autoload/plug.vim	/^function! s:log(bullet, name, lines)$/;"	f
+log4	config/nvim/autoload/plug.vim	/^function! s:log4(name, msg)$/;"	f
+logpos	config/nvim/autoload/plug.vim	/^function! s:logpos(name)$/;"	f
+lpad	config/nvim/autoload/plug.vim	/^function! s:lpad(str, len)$/;"	f
+names	config/nvim/autoload/plug.vim	/^function! s:names(...)$/;"	f
+new_window	config/nvim/autoload/plug.vim	/^function! s:new_window()$/;"	f
+not_in_tmux	bin/tat	/^not_in_tmux() {$/;"	f
+nvim_cb	config/nvim/autoload/plug.vim	/^function! s:nvim_cb(job_id, data, event) dict abort$/;"	f
+parse_options	config/nvim/autoload/plug.vim	/^function! s:parse_options(arg)$/;"	f
+path	config/nvim/autoload/plug.vim	/^  function! s:path(path)$/;"	f
+plug#	config/nvim/autoload/plug.vim	/^function! plug#(repo, ...)$/;"	f
+plug#begin	config/nvim/autoload/plug.vim	/^function! plug#begin(...)$/;"	f
+plug#end	config/nvim/autoload/plug.vim	/^function! plug#end()$/;"	f
+plug#helptags	config/nvim/autoload/plug.vim	/^function! plug#helptags()$/;"	f
+plug#load	config/nvim/autoload/plug.vim	/^function! plug#load(...)$/;"	f
+plug_window_exists	config/nvim/autoload/plug.vim	/^function! s:plug_window_exists()$/;"	f
+prepare	config/nvim/autoload/plug.vim	/^function! s:prepare(...)$/;"	f
+preview_commit	config/nvim/autoload/plug.vim	/^function! s:preview_commit()$/;"	f
+print_result	bin/git-churn	/^  def print_result$/;"	f	class:GitChurn
+progress_bar	config/nvim/autoload/plug.vim	/^function! s:progress_bar(line, bar, total)$/;"	f
+progress_opt	config/nvim/autoload/plug.vim	/^function! s:progress_opt(base)$/;"	f
+reap	config/nvim/autoload/plug.vim	/^function! s:reap(name)$/;"	f
+regress_bar	config/nvim/autoload/plug.vim	/^function! s:regress_bar()$/;"	f
+reload_plugins	config/nvim/autoload/plug.vim	/^function! s:reload_plugins()$/;"	f
+remove_blank_lines	bin/git-churn	/^  def remove_blank_lines$/;"	f	class:GitChurn
+remove_duplicates	bin/git-churn	/^  def remove_duplicates$/;"	f	class:GitChurn
+remove_rtp	config/nvim/autoload/plug.vim	/^function! s:remove_rtp()$/;"	f
+remove_triggers	config/nvim/autoload/plug.vim	/^function! s:remove_triggers(name)$/;"	f
+reorg_rtp	config/nvim/autoload/plug.vim	/^function! s:reorg_rtp()$/;"	f
+result	bin/git-churn	/^  attr_accessor :all_files_with_churn_count, :changed_files, :result$/;"	A
+retry	config/nvim/autoload/plug.vim	/^function! s:retry()$/;"	f
+revert	config/nvim/autoload/plug.vim	/^function! s:revert()$/;"	f
+rm_rf	config/nvim/autoload/plug.vim	/^function! s:rm_rf(dir)$/;"	f
+rtp	config/nvim/autoload/plug.vim	/^  function! s:rtp(spec)$/;"	f
+s:TYPE	config/nvim/autoload/plug.vim	/^let s:TYPE = {$/;"	v
+s:base_spec	config/nvim/autoload/plug.vim	/^let s:base_spec = { 'branch': 'master', 'frozen': 0 }$/;"	v
+s:cpo_save	config/nvim/autoload/plug.vim	/^let s:cpo_save = &cpo$/;"	v
+s:first_rtp	config/nvim/autoload/plug.vim	/^let s:first_rtp = s:escrtp(get(s:split_rtp(), 0, ''))$/;"	v
+s:is_win	config/nvim/autoload/plug.vim	/^let s:is_win = has('win32') || has('win64')$/;"	v
+s:last_rtp	config/nvim/autoload/plug.vim	/^let s:last_rtp  = s:escrtp(get(s:split_rtp(), -1, ''))$/;"	v
+s:loaded	config/nvim/autoload/plug.vim	/^let s:loaded = get(s:, 'loaded', {})$/;"	v
+s:mac_gui	config/nvim/autoload/plug.vim	/^let s:mac_gui = has('gui_macvim') && has('gui_running')$/;"	v
+s:me	config/nvim/autoload/plug.vim	/^let s:me = resolve(expand('<sfile>:p'))$/;"	v
+s:nvim	config/nvim/autoload/plug.vim	/^let s:nvim = has('nvim') && exists('*jobwait') && !s:is_win$/;"	v
+s:plug_buf	config/nvim/autoload/plug.vim	/^let s:plug_buf = get(s:, 'plug_buf', -1)$/;"	v
+s:plug_src	config/nvim/autoload/plug.vim	/^let s:plug_src = 'https:\/\/github.com\/junegunn\/vim-plug.git'$/;"	v
+s:plug_tab	config/nvim/autoload/plug.vim	/^let s:plug_tab = get(s:, 'plug_tab', -1)$/;"	v
+s:triggers	config/nvim/autoload/plug.vim	/^let s:triggers = get(s:, 'triggers', {})$/;"	v
+s:vim8	config/nvim/autoload/plug.vim	/^let s:vim8 = has('patch-8.0.0039') && exists('*job_start')$/;"	v
+safe_end_procs	tmuxinator/tmux-safekill/scripts/safekill.sh	/^function safe_end_procs {$/;"	f
+section	config/nvim/autoload/plug.vim	/^function! s:section(flags)$/;"	f
+session_exists	bin/tat	/^session_exists() {$/;"	f
+shellesc	config/nvim/autoload/plug.vim	/^function! s:shellesc(arg)$/;"	f
+snapshot	config/nvim/autoload/plug.vim	/^function! s:snapshot(force, ...) abort$/;"	f
+sort_by_ascending_churn_count	bin/git-churn	/^  def sort_by_ascending_churn_count$/;"	f	class:GitChurn
+source	config/nvim/autoload/plug.vim	/^function! s:source(from, ...)$/;"	f
+spawn	config/nvim/autoload/plug.vim	/^function! s:spawn(name, cmd, opts)$/;"	f
+split_rtp	config/nvim/autoload/plug.vim	/^function! s:split_rtp()$/;"	f
+status	config/nvim/autoload/plug.vim	/^function! s:status()$/;"	f
+status_load	config/nvim/autoload/plug.vim	/^function! s:status_load(lnum)$/;"	f
+status_update	config/nvim/autoload/plug.vim	/^function! s:status_update() range$/;"	f
+switch_in	config/nvim/autoload/plug.vim	/^function! s:switch_in()$/;"	f
+switch_out	config/nvim/autoload/plug.vim	/^function! s:switch_out(...)$/;"	f
+syntax	config/nvim/autoload/plug.vim	/^function! s:syntax()$/;"	f
+system	config/nvim/autoload/plug.vim	/^function! s:system(cmd, ...)$/;"	f
+system_chomp	config/nvim/autoload/plug.vim	/^function! s:system_chomp(...)$/;"	f
+tick	config/nvim/autoload/plug.vim	/^function! s:tick()$/;"	f
+title	tab_rename.sh	/^function title {$/;"	f
+to_a	config/nvim/autoload/plug.vim	/^function! s:to_a(v)$/;"	f
+to_s	config/nvim/autoload/plug.vim	/^function! s:to_s(v)$/;"	f
+trim	config/nvim/autoload/plug.vim	/^function! s:trim(str)$/;"	f
+update	config/nvim/autoload/plug.vim	/^function! s:update(force, names)$/;"	f
+update_finish	config/nvim/autoload/plug.vim	/^function! s:update_finish()$/;"	f
+update_impl	config/nvim/autoload/plug.vim	/^function! s:update_impl(pull, force, args) abort$/;"	f
+update_python	config/nvim/autoload/plug.vim	/^function! s:update_python()$/;"	f
+update_ruby	config/nvim/autoload/plug.vim	/^function! s:update_ruby()$/;"	f
+update_vim	config/nvim/autoload/plug.vim	/^function! s:update_vim()$/;"	f
+upgrade	config/nvim/autoload/plug.vim	/^function! s:upgrade()$/;"	f
+upgrade_specs	config/nvim/autoload/plug.vim	/^function! s:upgrade_specs()$/;"	f
+version_requirement	config/nvim/autoload/plug.vim	/^function! s:version_requirement(val, min)$/;"	f
+warn	config/nvim/autoload/plug.vim	/^function! s:warn(cmd, msg)$/;"	f
+with_cd	config/nvim/autoload/plug.vim	/^function! s:with_cd(cmd, dir)$/;"	f

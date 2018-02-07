@@ -32,6 +32,7 @@ alias rspec='bundle exec rspec'
 alias load='source ~/.zshrc'
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+alias fkps="kill -9 $(cat /usr/local/var/postgres/postmaster.pid | awk 'NR == 1')"
 
 #Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

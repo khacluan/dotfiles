@@ -36,6 +36,6 @@ windows:
       panes:
         - nvim .
   - Server: rails s
-  - RabbitMQ: brew services start rabbitmq
-  #- GrpcServer: bundle exec ruby grpc/grpc_server.rb
+  - Frontend: cd ~/projects/frontend-core; yyt
+  - GrpcServer: bundle exec ruby grpc/grpc_server.rb
 
