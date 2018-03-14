@@ -1,4 +1,5 @@
 # Unix
+alias python='python3'
 alias ll="ls -al"
 alias ln="ln -v"
 alias mkdir="mkdir -p"
@@ -33,6 +34,11 @@ alias load='source ~/.zshrc'
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 alias fkps="kill -9 $(cat /usr/local/var/postgres/postmaster.pid | awk 'NR == 1')"
+
+# deployment
+alias here='ehcli'
+alias herostag='ehcli --context=$STAG'
+alias heroprod='ehcli --context=$PROD'
 
 #Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
