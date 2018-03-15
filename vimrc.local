@@ -37,9 +37,13 @@ let g:deoplete#enable_at_startup = 1
 colorscheme OceanicNext
 
 " NeoMake
+let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
+" let g:neomake_ruby_rubocop_exe = '/Users/luand/.rvm/gems/ruby-2.3.3/bin/rubocop'
+
 let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 let g:neomake_javascript_eslint_exe = './node_modules/.bin/eslint'
 let g:neomake_javascript_flow_exe = './node_modules/.bin/flow'
+
 autocmd BufWritePost * Neomake " Lint check when save
 " let g:neomake_open_list = 2 " Open errors windows
 let g:neomake_logfile='/tmp/neomake_error.log'
