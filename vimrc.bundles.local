@@ -10,6 +10,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'janko-m/vim-test'
+Plug 'benmills/vimux'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-haml'
 
@@ -20,7 +21,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/vim-easy-align'
 Plug 'matze/vim-move'
-Plug 'ivalkeen/vim-ctrlp-tjump'
+" Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'tpope/vim-dispatch'
 Plug 'christoomey/vim-rfactory'
 Plug 'ntpeters/vim-better-whitespace'
@@ -52,3 +53,13 @@ Plug 'shime/vim-livedown'
 Plug 'Valloric/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
 Plug 'ngmy/vim-rubocop'
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
+" Define bundles via Github repos
+Plug 'christoomey/vim-run-interactive'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'pbrisbin/vim-mkdir'
+
+

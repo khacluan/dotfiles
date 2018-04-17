@@ -36,6 +36,5 @@ windows:
       panes:
         - nvim .
   - Server: rails s
-  - Frontend: cd ~/projects/frontend-core; yyt
   - GrpcServer: bundle exec ruby grpc/grpc_server.rb
 

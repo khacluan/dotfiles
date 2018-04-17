@@ -41,11 +41,11 @@ let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 " let g:neomake_ruby_rubocop_exe = '/Users/luand/.rvm/gems/ruby-2.3.3/bin/rubocop'
 
 let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
-let g:neomake_javascript_eslint_exe = './node_modules/.bin/eslint'
-let g:neomake_javascript_flow_exe = './node_modules/.bin/flow'
+" let g:neomake_javascript_eslint_exe = '/Users/luand/.nvm/versions/node/v8.7.0/bin/eslint'
+" let g:neomake_javascript_flow_exe = '/Users/luand/.nvm/versions/node/v8.7.0/bin/flow'
 
-autocmd BufWritePost * Neomake " Lint check when save
-" let g:neomake_open_list = 2 " Open errors windows
+autocmd BufWritePost * Neomake " check when save
+let g:neomake_open_list = 0 " Not show errors windows
 let g:neomake_logfile='/tmp/neomake_error.log'
 let g:neomake_place_signs=1
 
@@ -65,11 +65,11 @@ vmap <C-j> <Plug>MoveBlockDown
 vmap <C-k> <Plug>MoveBlockUp
 
 " Testing configure
-let test#strategy = {
-  \ 'nearest': 'neovim',
-  \ 'file':    'dispatch',
-  \ 'suite':   'basic',
-  \}
+" let test#strategy = {
+"   \ 'nearest': 'neovim',
+"   \ 'file':    'dispatch',
+"   \ 'suite':   'basic',
+"   \}
 
 let g:rspec_runner = "os_x_iterm2"
 
@@ -92,7 +92,7 @@ if exists('g:ag_highlight')
   let @/ = matchstr(a:args, "\\v(-)\@<!(\<)\@<=\\w+|['\"]\\zs.{-}\\ze['\"]")
   call feedkeys(":let &hlsearch=1 \| echo \<CR>", 'n')
 endif
-map <Leader>bi :PlugInstall<CR>
+map <Leader>bvi :PlugInstall<CR>
 map <Leader>ct :Start! ctags -R "."<CR>
 map <Leader>fs :FixWhitespace<CR>
 map <Leader>n <C-w>v<C-h><SPACE><SPACE>
@@ -117,8 +117,8 @@ map <Leader>ut :UndotreeToggle<CR>
 map <Leader>rr :!ruby %<CR>
 vmap u .
 vmap U .
-nnoremap <C-]> :CtrlPtjump<cr>
-vnoremap <C-]> :CtrlPtjumpVisual<cr>
+" nnoremap <C-]> :CtrlPtjump<cr>
+" vnoremap <C-]> :CtrlPtjumpVisual<cr>
 
 " Search
 nmap fs :Ag! "<cword>" -G "\.(css\|scss)" --ignore "*.min.css" --ignore-dir "app/assets/stylesheets/components" --ignore-dir "app/assets/webpack"<CR>
@@ -154,8 +154,8 @@ map <Leader>ah :Vhelper application<CR>
 map <Leader>aj <ESC>:e app/assets/javascripts/application.js<CR>
 map <Leader>as <ESC>:e app/assets/stylesheets/application.scss<CR>
 map <Leader>av :AV<CR>
-map <Leader>bb :!bundle install<CR>
-map <Leader>rdbm :!rake db:migrate<CR>
+map <Leader>bi :!bundle install<CR>
+map <Leader>md :!rake db:migrate<CR>
 map <Leader>c :Scontroller<SPACE>
 map <Leader>d <ESC>obyebug<ESC>
 map <Leader>dv <ESC>o- byebug<ESC>
@@ -208,9 +208,9 @@ let g:livedown_browser = "safari"
 map <Leader>lp :LivedownToggle<CR>
 
 " Find
-let g:ctrlp_tjump_shortener = ['/.*/gems/', '.../', '/.js', '/.jsx']
-let g:ctrlp_tjump_only_silent = 1
-let g:ctrlp_tjump_skip_tag_name = 1
+" let g:ctrlp_tjump_shortener = ['/.*/gems/', '.../', '/.js', '/.jsx']
+" let g:ctrlp_tjump_only_silent = 1
+" let g:ctrlp_tjump_skip_tag_name = 1
 
 set clipboard=unnamed
 filetype plugin indent on
@@ -241,7 +241,7 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
 " Clear highlight search results
-map <Leader><Leader> :noh<CR>
+map <Leader>cl :noh<CR>
 
 " Rspec Testing
 map <silent> t<C-n> :TestNearest<CR> " t Ctrl+n
@@ -250,5 +250,8 @@ map <silent> t<C-s> :TestSuite<CR>   " t Ctrl+s
 map <silent> t<C-l> :TestLast<CR>    " t Ctrl+l
 map <silent> t<C-g> :TestVisit<CR>   " t Ctrl+g
 
-let test#strategy = "neovim"
+let test#strategy = "vimux"
 let g:test#preserve_screen = 1
+
+" FZF settings
+map <Leader>ff :FZF<CR>

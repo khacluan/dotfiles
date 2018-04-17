@@ -15,8 +15,8 @@ set -s escape-time 0
 set -g mouse on
 bind-key -T root WheelUpPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"
 bind-key -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"
-bind-key -t vi-copy WheelUpPane halfpage-up
-bind-key -t vi-copy WheelDownPane halfpage-down
+bind-key -T copy-mode-vi WheelUpPane halfpage-up
+bind-key -T copy-mode-vi WheelDownPane halfpage-down
 
 # Shortcuts
 # bind-key -n C-n split-window -h -c '#{pane_current_path}'
@@ -57,8 +57,8 @@ bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 # Use vim keybindings in copy mode
 set-window-option -g mode-keys vi
-bind-key -t vi-copy 'v' begin-selection
-bind-key -t vi-copy 'y' copy-pipe 'xclip -selection clipboard >/dev/null'
+bind-key -T copy-mode-vi 'v' begin-selection
+bind-key -T copy-mode-vi 'y' copy-pipe 'xclip -selection clipboard >/dev/null'
 
 # Copy and past from clipboard
 set -g default-shell $SHELL
@@ -70,4 +70,3 @@ bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"
 
 # Set title for tmux session
 set-option -g set-titles on
-tmux new-session -s session_name
