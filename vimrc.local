@@ -41,8 +41,8 @@ let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 " let g:neomake_ruby_rubocop_exe = '/Users/luand/.rvm/gems/ruby-2.3.3/bin/rubocop'
 
 let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
-" let g:neomake_javascript_eslint_exe = '/Users/luand/.nvm/versions/node/v8.7.0/bin/eslint'
-" let g:neomake_javascript_flow_exe = '/Users/luand/.nvm/versions/node/v8.7.0/bin/flow'
+let g:neomake_javascript_eslint_exe = system('PATH=$(npm bin):$PATH && which eslint | tr -d "\n"')
+let g:neomake_javascript_flow_exe = system('PATH=$(npm bin):$PATH && which flow | tr -d "\n"')
 
 autocmd BufWritePost * Neomake " check when save
 let g:neomake_open_list = 0 " Not show errors windows
@@ -141,6 +141,8 @@ map <Leader>gr :Gremove<CR>
 map <Leader>gs :Gstatus<CR>
 map <Leader>go :Gbrowse<CR>
 
+" vim-gitgutter
+set updatetime=100
 
 " React
 " Trigger configuration (Optional)
@@ -223,7 +225,7 @@ set expandtab
 nmap <Leader>gp :let @+ = expand("%:p")<CR>
 
 " Jest to test javascript
-map <Leader>tj :!yarn jest %<CR>
+map <Leader>tj :!yarn jest %:p<CR>
 
 nnoremap x "_x
 vnoremap x "_x
@@ -254,4 +256,4 @@ let test#strategy = "vimux"
 let g:test#preserve_screen = 1
 
 " FZF settings
-map <Leader>ff :FZF<CR>
+map <C-p> :FZF<CR>

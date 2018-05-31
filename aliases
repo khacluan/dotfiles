@@ -17,8 +17,8 @@ alias rdbr="rake db:rollback"
 alias rdbs="rake db:seed"
 alias rr="rake routes"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias s="rspec"
-alias rs='rails s'
+alias rspec="LOG_LEVEL=2 rspec"
+alias rs='spring stop && rails s'
 alias rc='rails c'
 alias cl='clear'
 alias yt='yarn start'
@@ -33,7 +33,7 @@ alias rspec='bundle exec rspec'
 alias load='source ~/.zshrc'
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
-alias fkps="kill -9 $(cat /usr/local/var/postgres/postmaster.pid | awk 'NR == 1')"
+alias kpsql="kill -9 $(cat /usr/local/var/postgres/postmaster.pid | awk 'NR == 1')"
 
 # deployment
 alias here='ehcli'

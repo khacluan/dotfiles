@@ -37,4 +37,5 @@ windows:
         - nvim .
   - Server: rails s
   - GrpcServer: bundle exec ruby grpc/grpc_server.rb
-
+  - GrpcFeatureFlag: cd ~/projects/feature-flag-api && ./start_grpc.sh
+  - GrpcAuth: cd ~/projects/auth && ./start_rpc.sh
